@@ -1,4 +1,4 @@
-module github.com/certusone/yubihsm-go
+module github.com/AFI-Solutions/yubihsm-go
 
 go 1.14
 
