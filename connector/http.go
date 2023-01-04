@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/certusone/yubihsm-go/commands"
+	"github.com/AFI-Solutions/yubihsm-go/commands"
 )
 
 type (

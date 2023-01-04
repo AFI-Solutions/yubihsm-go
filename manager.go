@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/certusone/yubihsm-go/commands"
-	"github.com/certusone/yubihsm-go/connector"
-	"github.com/certusone/yubihsm-go/securechannel"
+	"github.com/AFI-Solutions/yubihsm-go/commands"
+	"github.com/AFI-Solutions/yubihsm-go/connector"
+	"github.com/AFI-Solutions/yubihsm-go/securechannel"
 )
 
 type (

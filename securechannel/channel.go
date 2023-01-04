@@ -9,10 +9,10 @@ import (
 	"errors"
 	"sync"
 
+	"github.com/AFI-Solutions/yubihsm-go/authkey"
+	"github.com/AFI-Solutions/yubihsm-go/commands"
+	"github.com/AFI-Solutions/yubihsm-go/connector"
 	"github.com/enceve/crypto/cmac"
-	"github.com/certusone/yubihsm-go/authkey"
-	"github.com/certusone/yubihsm-go/commands"
-	"github.com/certusone/yubihsm-go/connector"
 )
 
 type (

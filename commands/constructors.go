@@ -6,9 +6,8 @@ import (
 	"errors"
 	"io"
 
-	"github.com/certusone/yubihsm-go/authkey"
+	"github.com/AFI-Solutions/yubihsm-go/authkey"
 )
-
 
 func CreateDeviceInfoCommand() (*CommandMessage, error) {
 	command := &CommandMessage{
