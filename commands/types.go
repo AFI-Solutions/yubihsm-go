@@ -84,7 +84,17 @@ const (
 	ErrorCodeCommandUnexecuted        ErrorCode = 0xff
 
 	// Algorithms
+	AlgorithmRSAPKCS1SHA1            Algorithm = 1
+	AlgorithmRSAPKCS1SHA256          Algorithm = 2
+	AlgorithmRSAPKCS1SHA384          Algorithm = 3
+	AlgorithmRSAPKCS1SHA512          Algorithm = 4
+	AlgorithmRSAPSSSHA1              Algorithm = 5
+	AlgorithmRSAPSSSHA256            Algorithm = 6
+	AlgorithmRSAPSSSHA384            Algorithm = 7
+	AlgorithmRSAPSSSHA512            Algorithm = 8
 	AlgorithmRSA2048                 Algorithm = 9
+	AlgorithmRSA3072                 Algorithm = 10
+	AlgorithmRSA4096                 Algorithm = 11
 	AlgorithmP256                    Algorithm = 12
 	AlgorithmP384                    Algorithm = 13
 	AlgorithmP521                    Algorithm = 14
@@ -95,7 +105,11 @@ const (
 	AlgorithmAES128CCMWrap           Algorithm = 29
 	AlgorithmAES192CCMWrap           Algorithm = 41
 	AlgorithmAES256CCMWrap           Algorithm = 42
+	AlgorithmECDSASHA256             Algorithm = 43
+	AlgorithmECDSASHA384             Algorithm = 44
+	AlgorithmECDSASHA512             Algorithm = 45
 	AlgorithmED25519                 Algorithm = 46
+	AlgorithmECP224                  Algorithm = 47
 
 	// Capabilities
 	CapabilityNone                    uint64 = 0x0000000000000000
