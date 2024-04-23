@@ -227,11 +227,21 @@ const (
 	ListObjectParamLabel        uint8 = 0x06
 )
 
-// CapabilityPrimitiveFromSlice OR's all the capabilitites together.
+// CapabilityPrimitiveFromSlice OR's all the capabilities together.
 func CapabilityPrimitiveFromSlice(capabilitites []uint64) uint64 {
 	var primitive uint64
 	for _, c := range capabilitites {
 		primitive |= c
 	}
 	return primitive
+}
+
+func SliceForCapabilityPrimitive(primitive uint64) (capabilities []uint64) {
+	for i := 0; i < 64; i++ {
+		c := uint64(1) << i
+		if c&primitive > 0 {
+			capabilities = append(capabilities, c)
+		}
+	}
+	return
 }
