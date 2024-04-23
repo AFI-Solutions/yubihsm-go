@@ -76,6 +76,10 @@ type (
 		Signature []byte
 	}
 
+	HMACDataResponse struct {
+		Data []byte
+	}
+
 	SignDataEcdsaResponse struct {
 		Signature []byte
 	}
@@ -185,6 +189,8 @@ func ParseResponse(data []byte) (Response, error) {
 		return parseSignDataEcdsaResponse(payload)
 	case CommandTypeSignDataPkcs1:
 		return parseSignDataPkcs1Response(payload)
+	case CommandTypeHMACData:
+		return parseHMACDataResponse(payload)
 	case CommandTypePutAsymmetric:
 		return parsePutAsymmetricKeyResponse(payload)
 	case CommandTypeListObjects:
@@ -311,6 +317,16 @@ func parseSignDataPkcs1Response(payload []byte) (Response, error) {
 
 	return &SignDataPkcs1Response{
 		Signature: payload,
+	}, nil
+}
+
+func parseHMACDataResponse(payload []byte) (Response, error) {
+	if len(payload) < 1 {
+		return nil, errors.New("invalid response payload length")
+	}
+
+	return &HMACDataResponse{
+		Data: payload,
 	}, nil
 }
 
